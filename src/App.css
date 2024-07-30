@@ -1,0 +1,530 @@
+/*=== Initial Style =================================*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0a192f;
+  --green: #64ffda;
+  --gray: #8892b0;
+  --font-mono: "Fira Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: white;
+  font-family: var(--font-mono);
+  background-color: var(--bg-color);
+  width: 100vw;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+/*=== Hamburguer Menu =================================*/
+
+label {
+  display: none;
+}
+/*=== Navigation Menu =================================*/
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-inline: 10%;
+  padding-inline: 2.4rem;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.menu__itens {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu__itens li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.menu__itens li a:hover {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+.btn-blog {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-content {
+  margin-top: 5rem;
+}
+
+/*=== Sobre Nós =================================*/
+#sobre-nos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 10%;
+}
+
+.sobre-nos__title {
+  width: 60rem;
+}
+
+.sobre-nos__title p {
+  color: var(--green);
+}
+
+.sobre-nos__title h1 {
+  width: fit-content;
+  font-family: var(--font-sans);
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 3.6rem;
+}
+
+.sobre-nos__title h2 {
+  margin-top: 10px;
+  color: var(--gray);
+}
+
+#sobre-nos img {
+  width: 45%;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.portfolio__cards__item_description {
+  margin-top: 20px;
+}
+#sobre-nos .portfolio__cards__item_description a {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__cards__item_description a:hover {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+/*=== Footer =================================*/
+footer {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  font: 1.6rem var(--font-sans);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer span {
+  font: 1.6rem var(--font-mono);
+  color: var(--green);
+}
+.footer span:hover {
+  opacity: 0.7;
+}
+
+.footer a {
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.footer a:hover,
+.footer span:hover {
+  transform: translateY(-2px);
+}
+
+/*=== Habilidades =================================*/
+#habilidades {
+  margin-top: 10rem;
+  margin-inline: 10%;
+}
+
+.habilidades__title h1 {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--green);
+}
+.habilidades__title h4 {
+  color: var(--gray);
+}
+.habilidades__cards {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  align-items: center;
+}
+.habilidades__cards__item {
+  border: 1px solid var(--green);
+  margin-top: 5rem;
+  padding: 5rem;
+}
+
+.habilidades__cards__item:hover {
+  transform: translateY(-5px);
+}
+
+.habilidades__cards__item p {
+  color: var(--green);
+  margin-left: 1rem;
+}
+
+/*=== Portfólio =================================*/
+#portfolio {
+  margin-top: 10rem;
+  margin-inline: 10%;
+}
+
+.portfolio__title h1 {
+  font-weight: 600;
+  font-size: 3.6rem;
+}
+
+.portfolio__title h4 {
+  color: var(--green);
+}
+
+.portfolio__cards {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.portfolio__cards__item {
+  display: flex;
+  gap: 8rem;
+  margin-bottom: 5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio__cards__item img {
+  border: 1px solid var(--green);
+  width: 30%;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.portfolio__cards__item h3 {
+  color: var(--green);
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio__cards__item p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: var(--font-sans);
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+.portfolio__cards__item_description {
+  width: 50%;
+}
+.portfolio__cards__item_description a {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__cards__item_description a:hover {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+.portfolio__button {
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__button a {
+  background-color: none;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__button a:hover {
+  opacity: 0.7;
+}
+
+/* Typer effect */
+.sobre-nos__title h1 {
+  overflow: hidden;
+  border-right: 0.05em solid var(--green);
+  white-space: nowrap;
+  animation: digitando 1.5s steps(12, start), traco_piscando 0.8s step-start 0.8s infinite;
+}
+
+@keyframes digitando {
+  from {
+    width: 0;
+  }
+  to {
+    width: 38%;
+  }
+}
+
+@keyframes traco_piscando {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--green);
+  }
+}
+
+/* Telas até 768px */
+@media (max-width: 860px) {
+  body {
+    overflow: hidden;
+  }
+
+  label {
+    display: initial;
+  }
+
+  label .menu-mobile {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
+  }
+
+  label .hamburger {
+    position: absolute;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #69d2e7;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  label .hamburger:after,
+  label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #69d2e7;
+  }
+
+  label .hamburger:before {
+    top: -10px;
+  }
+
+  label .hamburger:after {
+    bottom: -10px;
+  }
+
+  label input {
+    display: none;
+  }
+
+  label input:checked + .menu-mobile {
+    box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+    border-radius: 0;
+  }
+
+  label input:checked + .menu-mobile .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label input:checked + .menu-mobile .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  label input:checked + .menu-mobile .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  label input:checked + .menu-mobile + ul {
+    opacity: 1;
+  }
+
+  label ul {
+    z-index: 200;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+  }
+
+  label a {
+    color: var(--bg-color);
+    text-decoration: none;
+  }
+
+  label a:hover {
+    opacity: 0.6;
+  }
+
+  label ul li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  label ul li .btn-blog {
+    padding: 1rem 5rem;
+  }
+
+  label ul li .btn-blog:hover {
+    opacity: 0.6;
+  }
+
+  /*=== Navigation Menu =================================*/
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar .menu {
+    flex-direction: column;
+    display: none;
+  }
+
+  /*=== Sobre Nós =================================*/
+  #sobre-nos {
+    flex-direction: column;
+    margin-inline: 0;
+  }
+
+  .sobre-nos__title {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .sobre-nos__title h1 {
+    font-family: var(--font-sans);
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 2.6rem;
+  }
+
+  #sobre-nos img {
+    margin-top: 10rem;
+    width: 90%;
+  }
+
+  /*=== Habilidades =================================*/
+  .habilidades__cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /*=== Portfólio =================================*/
+  #portfolio {
+    margin-top: 10rem;
+    margin-inline: 10%;
+  }
+
+  .portfolio__cards__item {
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 10rem;
+  }
+
+  .portfolio__cards__item img {
+    width: 100%;
+  }
+
+  .portfolio__cards__item_description {
+    width: 100%;
+  }
+}
